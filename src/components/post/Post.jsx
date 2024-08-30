@@ -184,7 +184,7 @@ const Post = ({post}) => {
                 ? <AiFillHeart onClick={handleLikePost} />
                 : <AiOutlineHeart onClick={handleLikePost} />
             }
-            <span className={`${classes.likesCount}`}>{likesCount} {likesCount === 1 ? 'Like' : 'Likes'}</span>
+{/*             <span className={`${classes.likesCount}`}>{likesCount} {likesCount === 1 ? 'Like' : 'Likes'}</span> */}
             <BiMessageRounded onClick={() => setShowComment(prev => !prev)} />
           </div>
           <div className={classes.controlsRight} onClick={handleBookmark}>
