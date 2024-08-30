@@ -1,0 +1,228 @@
+/* .container{
+    height: calc(100vh - 60px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    height: 70vh;
+    width: 27.5vw;
+    border: 1px solid #333;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper > h2{
+    color: rgb(23, 16, 151);
+    text-align: center;
+    margin: 2.5rem 0;
+    font-size: 30px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+}
+
+form>input{
+    width: 50%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #333;
+}
+
+form>label{
+    align-self: center;
+    width: 50%;
+    cursor: pointer;
+    transition: 150ms all;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+form>label:hover{
+    color: #444;
+}
+
+form>button{
+    outline: none;
+    background-color: blue;
+    color: #fff;
+    border-radius: 12px;
+    padding: 0.5rem 1.25rem;
+    font-size: 18px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+form>button:hover{
+    background-color: #fff;
+    border-color: blue;
+    color: blue;
+} */
+
+/* responsive */
+/* @media only screen and (max-width: 992px){
+    .wrapper{
+        height: 62.5vh;
+        width: 32.5vw;
+    }
+}
+@media only screen and (max-width: 768px){
+    .wrapper{
+        height: 67.5vh;
+        width: 40vw;
+    }
+} */
+
+.container {
+    min-height: calc(100vh - 60px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+    padding: 2rem;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.wrapper > h2 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+form > input[type="text"] {
+    width: 100%;
+    padding: 0.75rem;
+    outline: none;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form > input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+form > label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0.75rem;
+    font-size: 16px;
+    color: #555;
+    background-color: #f0f2f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+form > label:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+form > button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    outline: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form > button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 992px) {
+    .wrapper {
+        padding: 1.5rem;
+    }
+
+    .wrapper > h2 {
+        font-size: 24px;
+    }
+
+    form > input[type="text"],
+    form > label,
+    form > button {
+        font-size: 15px;
+        padding: 0.6rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        padding: 1.25rem;
+    }
+
+    form > input[type="text"],
+    form > label,
+    form > button {
+        font-size: 14px;
+        padding: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .wrapper {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .wrapper > h2 {
+        font-size: 22px;
+    }
+
+    form > input[type="text"],
+    form > label,
+    form > button {
+        font-size: 13px;
+        padding: 0.5rem;
+    }
+}

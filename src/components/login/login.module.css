@@ -1,0 +1,326 @@
+/* .loginContainer{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999999999;
+    background: rgba(0, 0, 0, 0.4);
+    background-image: url('../../assets/people.jpg');
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+}
+
+.loginWrapper{
+    border-radius: 20px;
+    width: 30vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.loginLeftSide{
+    flex: 1;
+    width: 50%;
+    height: 100%;
+}
+
+.leftImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.loginRightSide{
+    margin: 0;
+    flex: 1;
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+.loginRightSide >h2{
+    text-align:center;
+    font-size:36px;
+    color:#f22a2a;
+    margin:2.5rem 0;
+}
+
+.loginRightSide > .loginForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.loginForm{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+}
+
+.loginForm > input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #333;
+    width: 50%;
+    font-size:14px;
+    padding-left: 0.25rem;
+    padding-bottom: 0.25rem;
+    transition: 150ms all ease-in-out;
+}
+
+.loginForm > input:focus{
+    padding-left: 0.75rem;
+}
+
+.loginForm > .submitBtn{
+    margin-top: 2.5rem;
+    outline: none;
+    border: 1px solid transparent;
+    background-color: #f22a2a;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+}
+
+.loginForm > .submitBtn:hover{
+    border-color: #f22a2a;
+    color: #f22a2a;
+    background-color: #fff;
+}
+
+.loginForm > p{
+    text-align: center;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.loginForm > p > a{
+    text-decoration: none;
+    font-size: 17px;
+    color: #888;
+    margin-top: 0.25rem;
+}
+
+.errorMessage{
+    height: 70px;
+    width: 250px;
+    text-align: center;
+    border-radius: 20px;
+    line-height: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #f00;
+    color: #fff;
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+}
+
+
+@media screen and (max-width: 768px) {
+    .loginContainer {
+        height: 100%;
+        width: 100%;
+    }
+
+    .loginWrapper {
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .loginLeftSide, .leftImg {
+        width: 100%;
+        height: 50%;
+    }
+
+    .loginRightSide {
+        flex: 1;
+        width: 100%;
+        height: 50%;
+        overflow: auto;
+    }
+}
+
+/* Styles for smaller screens, like mobile devices */
+/* @media screen and (max-width: 480px) {
+    .loginForm > input {
+        width: 100%;
+    }
+
+    .loginForm > .submitBtn {
+        width: 100%;
+    }
+
+    .errorMessage {
+        width: 100%;
+        right: 0;
+    }
+} */ 
+
+.loginContainer {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-image: url('../../assets/people.jpg');
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.loginWrapper {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.loginWrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.loginRightSide {
+    width: 100%;
+}
+
+.loginRightSide > h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #f22a2a;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.loginForm > input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.loginForm > input:focus {
+    border-color: #f22a2a;
+    box-shadow: 0 0 0 2px rgba(242, 42, 42, 0.25);
+}
+
+.loginForm > .submitBtn {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    background-color: #f22a2a;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.loginForm > .submitBtn:hover {
+    background-color: #d92020;
+    transform: translateY(-2px);
+}
+
+.loginForm > p {
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+}
+
+.loginForm > p > a {
+    text-decoration: none;
+    color: #f22a2a;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.errorMessage {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #f00;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 1rem;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .loginWrapper {
+        padding: 1.5rem;
+        max-width: 90%;
+    }
+
+    .loginRightSide > h2 {
+        font-size: 28px;
+    }
+
+    .loginForm > input, .loginForm > .submitBtn {
+        font-size: 15px;
+        padding: 0.65rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .loginWrapper {
+        padding: 1rem;
+    }
+
+    .loginRightSide > h2 {
+        font-size: 24px;
+    }
+
+    .loginForm > input, .loginForm > .submitBtn {
+        font-size: 14px;
+        padding: 0.5rem;
+    }
+}

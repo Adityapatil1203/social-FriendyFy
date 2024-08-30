@@ -1,0 +1,102 @@
+.container {
+    display: grid;
+    grid-template-columns: 1.5fr 2.5fr 1.5fr; 
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    height: calc(100vh - 80px);
+}
+
+.left, .center, .right {
+    padding: 1rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: calc(100vh - 100px);
+}
+
+.left {
+    grid-column: 1;
+}
+
+.center {
+    grid-column: 2;
+}
+
+.right {
+    grid-column: 3;
+}
+
+/* Adjust scrollbars for better UX */
+.left::-webkit-scrollbar, .right::-webkit-scrollbar, .center::-webkit-scrollbar {
+    width: 6px;
+}
+
+.left::-webkit-scrollbar-thumb, .right::-webkit-scrollbar-thumb, .center::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 10px;
+}
+
+.left::-webkit-scrollbar-track, .right::-webkit-scrollbar-track, .center::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 992px) {
+    .container {
+        grid-template-columns: 1fr 2fr; 
+        grid-template-areas: 
+            "left center"
+            "right center"; 
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .left {
+        grid-area: left;
+    }
+
+    .center {
+        grid-area: center;
+    }
+
+    .right {
+        grid-area: right;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "center"
+            "left"
+            "right"; 
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .left, .center, .right {
+        max-height: none; 
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr; 
+        grid-template-areas: 
+            "center"
+            "left"
+            "right";
+        gap: 1rem;
+        padding: 0;
+    }
+
+    .left, .center, .right {
+        padding: 1rem;
+        max-height: none;
+    }
+}

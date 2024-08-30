@@ -1,0 +1,104 @@
+/* *{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    user-select:none;
+    font-family:"Roboto",sans-serif;
+    scroll-behavior:smooth;
+}
+
+ .App {
+    overflow: hidden;
+    color: #242d49;
+    background: #f3f3f3;
+   
+  } 
+.blur {
+    position: absolute;
+    width: 22rem;
+    height: 14rem;
+    border-radius: 50%;
+    background: red;
+    filter: blur(90px);
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  } */
+
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f3f3f3;
+    color: #242d49;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: white;
+    overflow-x: hidden;
+}
+
+/* Blur Effect */
+.blur {
+    position: absolute;
+    width: 22rem;
+    height: 14rem;
+    border-radius: 50%;
+    background: rgba(255, 0, 0, 0.6);
+    filter: blur(90px);
+    z-index: -1;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .blur {
+        width: 18rem;
+        height: 12rem;
+        filter: blur(70px);
+    }
+}
+
+@media (max-width: 768px) {
+    .App {
+        padding: 0 1rem;
+    }
+
+    .blur {
+        width: 14rem;
+        height: 10rem;
+        filter: blur(50px);
+    }
+}
+
+@media (max-width: 480px) {
+    .blur {
+        width: 10rem;
+        height: 8rem;
+        filter: blur(40px);
+    }
+}

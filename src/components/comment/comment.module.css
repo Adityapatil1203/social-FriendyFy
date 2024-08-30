@@ -1,0 +1,238 @@
+/* .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+}
+
+.commentLeft{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.commentData{
+    display: flex;
+    flex-direction: column;
+    margin-right: 1.5rem;
+    min-width: 100px;
+}
+
+.commentData >span:first-child{
+    font-weight: 500;
+}
+
+.commentTimeago{
+    font-size: 15px;
+    color: #666;
+}
+
+.commentText{
+    align-self: flex-start;
+    font-size: 15px;
+    color: #222;
+    width: 75%;
+    word-wrap: break-word;
+}
+
+.commentImg{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.commentRight{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.25rem;
+    cursor: pointer;
+}
+ */
+
+
+/* RESPONSIVEE */
+/* @media only screen and (max-width: 992px){
+    .commentImg{
+        height: 33px;
+        width: 33px;
+    }
+
+    .commentData{
+        display: flex;
+        flex-direction: column;
+        margin-right: 1.25rem;
+        min-width: 80px;
+    }
+
+    .comment{
+        padding: 0 1.5rem;
+    }
+
+    .commentText{
+        font-size: 14px;
+    }
+
+    .commentRight{
+        font-size: 15px;
+    }
+
+    .commentData> span:first-child{
+        font-size: 15px;
+    }
+
+    .commentData> span:last-child{
+        font-size: 14px;
+    }
+} */
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow for a card-like feel */
+}
+
+.commentLeft {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 85%; /* Slightly reduce the width to fit better with the right side */
+}
+
+.commentImg {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+.commentData {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%; /* Ensure it doesn't overflow */
+    word-wrap: break-word;
+}
+
+.commentData > span:first-child {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+
+.commentTimeago {
+    font-size: 12px;
+    color: #888;
+}
+
+.commentText {
+    font-size: 14px;
+    color: #222;
+    margin-top: 0.25rem;
+    line-height: 1.4; /* Adjust line-height to reduce height */
+}
+
+.commentRight {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.25rem;
+    cursor: pointer;
+    font-size: 12px;
+    color: #888;
+}
+
+.commentRight > svg {
+    font-size: 18px;
+    color: #ff5e5e;
+    transition: color 0.3s ease;
+}
+
+.commentRight > svg:hover {
+    color: #ff3333;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 992px) {
+    .container {
+        padding: 0.25rem 0.5rem;
+    }
+
+    .commentImg {
+        height: 28px;
+        width: 28px;
+    }
+
+    .commentData > span:first-child {
+        font-size: 13px;
+    }
+
+    .commentText {
+        font-size: 13px;
+    }
+
+    .commentRight > svg {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem;
+    }
+
+    .commentLeft {
+        width: 100%;
+    }
+
+    .commentRight {
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .commentRight > svg {
+        font-size: 16px;
+    }
+
+    .commentRight > span {
+        margin-left: 0.25rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        padding: 0.5rem;
+    }
+
+    .commentImg {
+        height: 24px;
+        width: 24px;
+    }
+
+    .commentData > span:first-child {
+        font-size: 12px;
+    }
+
+    .commentTimeago {
+        font-size: 11px;
+    }
+
+    .commentText {
+        font-size: 12px;
+    }
+
+    .commentRight > svg {
+        font-size: 14px;
+    }
+}
