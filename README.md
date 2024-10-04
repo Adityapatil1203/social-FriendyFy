@@ -1,74 +1,81 @@
-# Getting Started with Create React App
+# FriendyFy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**FriendyFy** is a social networking platform that allows users to create posts, interact with others through comments and likes, and manage their profiles. The platform is built using the MERN stack and supports JWT authentication for secure user sessions.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- User registration and authentication using JWT.
+- Create, like, and comment on posts.
+- Real-time updates for user interactions.
+- Scalable architecture with backend hosted on Render and frontend on Vercel.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Frontend:
+- **React.js**
+- **Redux** (State Management)
+- **Tailwind CSS** (Styling)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Backend:
+- **Node.js**
+- **Express.js**
+- **MongoDB** (Database)
+- **JWT** (Authentication)
 
-### `npm test`
+### Additional Tools:
+- **Render** (Backend Hosting)
+- **Vercel** (Frontend Hosting)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+### Prerequisites:
+- Node.js
+- MongoDB
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Steps to run the project:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    git clone https://github.com/yourusername/friendyfy.git
+    ```
 
-### `npm run eject`
+2. Navigate to the **frontend** and **backend** directories and install the dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```bash
+    cd frontend
+    npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    cd ../backend
+    npm install
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Create a `.env` file in the **backend** directory with the necessary environment variables. Example:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    **Backend .env**:
+    ```env
+    DATABASE_URL=<Your MongoDB URL>
+    JWT_SECRET=<Your JWT Secret>
+    ```
 
-## Learn More
+4. Start both the backend and frontend servers:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    **Backend**:
+    ```bash
+    npm start
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    **Frontend**:
+    ```bash
+    npm start
+    ```
 
-### Code Splitting
+5. Open the application in your browser at `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contribution
 
-### Analyzing the Bundle Size
+Contributions are welcome! Please fork the repository and submit a pull request with your improvements.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## License
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-<!-- https://friendyfy.onrender.com -->
-<!-- https://friendyfy.onrender.com -->
-<!-- https://friendyfy.onrender.com -->
+This project is licensed under the MIT License.
